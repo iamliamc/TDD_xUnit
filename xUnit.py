@@ -13,5 +13,16 @@ class TestCaseTest(TestCase):
         self.test.run()
         assert(self.test.wasSetup)
 
-TestCaseTest("testRunning").run()
+TCT = TestCaseTest("testRunning")
+TCT.run()
+
+print TCT.test.__class__
+print TCT.test.name
+
+print TCT.__class__
+print TCT.name
+
+# print issubclass(TestCaseTest, TestCase)
+# print issubclass(WasRun, TestCase)
+
 print "Compiled and ran"
