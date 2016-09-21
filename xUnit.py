@@ -11,10 +11,13 @@ class TestCaseTest(TestCase):
 
     def testSetUp(self):
         self.test.run()
-        assert(self.test.wasSetup)
+        assert(self.test.wasSetUp)
 
 TCT = TestCaseTest("testRunning")
 TCT.run()
+
+TCT2 = TestCaseTest("testSetUp")
+TCT2.run()
 
 print TCT.test.__class__
 print TCT.test.name
